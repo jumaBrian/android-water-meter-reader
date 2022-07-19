@@ -13,4 +13,10 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+<!--                splash screen implimentation API 12-->
+<!--    <style name="Theme.App.Starting" parent="Theme.SplashScreen">-->
+<!--        <item name="windowSplashScreenBackground">@color/white</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>-->
+<!--        <item name="postSplashScreenTheme">@style/Theme.AndroidWaterMeter</item>-->
+<!--    </style>-->
 </resources>

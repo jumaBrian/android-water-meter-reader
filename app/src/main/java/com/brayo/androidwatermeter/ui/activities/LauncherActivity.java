@@ -17,6 +17,7 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
+        // Schedules the activity view time
         h.postDelayed(new Runnable() {
             @Override
             public void run() {

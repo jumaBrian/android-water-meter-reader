@@ -126,30 +126,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-    <Button
-        android:id="@+id/bvHome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="@string/go_back_to_login"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/buttons_green"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bvHome"
-        app:layout_constraintStart_toStartOf="@+id/bvHome"
-        app:layout_constraintTop_toTopOf="@+id/bvHome"
-        app:srcCompat="@drawable/ic_baseline_home_30" />
-
     <ProgressBar
         android:id="@+id/progressBarRegister"
         style="?android:attr/progressBarStyle"
@@ -158,6 +134,7 @@
         android:layout_marginTop="24dp"
         android:progressBackgroundTint="@color/buttons_green"
         android:progressTint="@color/buttons_green"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

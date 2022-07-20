@@ -1,16 +1,24 @@
 package com.brayo.androidwatermeter.ui.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.brayo.androidwatermeter.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
@@ -32,11 +40,17 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.progressBarLogin)
     ProgressBar launchingMainActivity;
 
+    // Firebase Class
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        // firebase object
+        mAuth = FirebaseAuth.getInstance();
 
         // button navigation
         // 1. Log in button
@@ -44,7 +58,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 userLogin();
-
             }
         });
 
@@ -54,7 +67,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(intent);
-
             }
         });
 
@@ -62,10 +74,8 @@ public class LoginActivity extends AppCompatActivity {
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
-
     }
 
     private void userLogin() {
@@ -90,10 +100,25 @@ public class LoginActivity extends AppCompatActivity {
             userPasswordLogin.requestFocus();
             return;
         }
-        // call progress bar to show activity
+        // hide keyboard from screen
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(login.getWindowToken(), InputMethodManager.RESULT_UNCHANGED_SHOWN);
 
+        // call progress bar to show activity
         launchingMainActivity.setVisibility(View.VISIBLE);
 
-
+        // firebase function
+        mAuth.signInWithEmailAndPassword(accountEmail, accountPassword)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()){
+                            launchingMainActivity.setVisibility(View.GONE);
+                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(LoginActivity.this, "Failed to login! Please check your credentials", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 }

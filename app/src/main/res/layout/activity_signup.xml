@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -79,10 +79,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/edPasswordNew" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edStaffID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -97,7 +97,7 @@
         android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/edEmailNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -112,7 +112,7 @@
         tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/edPasswordNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -127,18 +127,27 @@
         tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
+        android:id="@+id/bvHome"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="@android:color/transparent"
+        android:background="@android:color/transparent"
         android:text="@string/go_back_to_login"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/buttons_green"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bvHome"
+        app:layout_constraintStart_toStartOf="@+id/bvHome"
+        app:layout_constraintTop_toTopOf="@+id/bvHome"
+        app:srcCompat="@drawable/ic_baseline_home_30" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

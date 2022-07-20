@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
                 // opens Signup activity
                 Intent intent = new Intent(MainActivity.this, LauncherActivity.class);
                 startActivity(intent);
-
             }
         });
 

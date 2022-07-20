@@ -6,7 +6,6 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.brayo.androidwatermeter.MainActivity;
 import com.brayo.androidwatermeter.R;
 
 public class LauncherActivity extends AppCompatActivity {
@@ -21,11 +20,10 @@ public class LauncherActivity extends AppCompatActivity {
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(LauncherActivity.this, MainActivity.class);
+                Intent intent = new Intent(LauncherActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
         },2000);
-
     }
 }

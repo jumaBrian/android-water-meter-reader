@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1056285889591",
+    "project_id": "androidwatermeter",
+    "storage_bucket": "androidwatermeter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1056285889591:android:05761607e4ee56be4fdbb2",
+        "android_client_info": {
+          "package_name": "com.brayo.androidwatermeter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1056285889591-me1935a5ktmmg8fi6j4ubub3s086rge0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj796wnH2FRE9pEXCTW9mWbVkfIPziPyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1056285889591-me1935a5ktmmg8fi6j4ubub3s086rge0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

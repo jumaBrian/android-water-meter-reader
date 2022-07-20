@@ -11,6 +11,7 @@ import com.brayo.androidwatermeter.R;
 public class LauncherActivity extends AppCompatActivity {
 
     Handler h = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,6 @@ public class LauncherActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },2000);
+        }, 2000);
     }
 }

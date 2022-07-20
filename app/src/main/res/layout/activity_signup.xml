@@ -89,12 +89,12 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/st001"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="TextContrastCheck"
-        android:importantForAutofill="no" />
+        tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/edEmailNew"
@@ -149,5 +149,18 @@
         app:layout_constraintStart_toStartOf="@+id/bvHome"
         app:layout_constraintTop_toTopOf="@+id/bvHome"
         app:srcCompat="@drawable/ic_baseline_home_30" />
+
+    <ProgressBar
+        android:id="@+id/progressBarRegister"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="92dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="24dp"
+        android:progressBackgroundTint="@color/buttons_green"
+        android:progressTint="@color/buttons_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

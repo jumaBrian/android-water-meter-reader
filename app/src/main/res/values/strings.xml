@@ -14,4 +14,5 @@
     <string name="example_email_com">example.email.com</string>
     <string name="go_back_to_login">Go Back To Login</string>
     <string name="create_account_label">Create Account</string>
+    <string name="password_create_account">Password</string>
 </resources>

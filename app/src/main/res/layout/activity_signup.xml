@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/back"
     tools:context=".ui.activities.SignupActivity">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:fontFamily="@font/bungee_inline"
-        android:text="Create Account"
+        android:text="@string/create_account_label"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
@@ -31,7 +32,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Staff ID"
+        android:text="@string/staff_id"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Email"
+        android:text="@string/emailCreateAccount"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
@@ -57,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Password"
+        android:text="@string/passwordCreateAccount"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
@@ -70,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Complete Registration"
+        android:text="@string/complete_registration"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,8 +86,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="ST001"
+        android:hint="@string/st001"
         android:inputType="textPersonName"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -97,8 +99,9 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="example.email.com"
+        android:hint="@string/example_email_com"
         android:inputType="textEmailAddress"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -110,6 +113,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -119,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:backgroundTint="@android:color/transparent"
-        android:text="Go Back To Login"
+        android:text="@string/go_back_to_login"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/buttons_green"
         android:textStyle="bold"

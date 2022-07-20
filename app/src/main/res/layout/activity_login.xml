@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:fontFamily="@font/bungee_inline"
-        android:text="Welcome Back"
+        android:text="@string/welcome_back"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.213"
@@ -38,12 +38,14 @@
         android:drawableStart="@drawable/ic_baseline_lock_open_30"
         android:drawablePadding="70dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
+        tools:ignore="TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -53,19 +55,21 @@
         android:drawableStart="@drawable/ic_baseline_account_box_30"
         android:drawablePadding="70dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="168dp"
         android:layout_height="49dp"
         android:layout_marginTop="40dp"
-        android:text="Log in"
+        android:text="@string/log_in"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintHorizontal_bias="0.494"
@@ -79,7 +83,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
-        android:text="Create Account"
+        android:text="@string/create_account"
         android:textColor="@color/primary_blue"
         android:textSize="12sp"
         android:textStyle="bold"
@@ -95,7 +99,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:background="@android:color/transparent"
-        android:text="Forgot Password ?"
+        android:text="@string/forgot_password"
         android:textColor="@color/design_default_color_error"
         android:textSize="12sp"
         android:textStyle="bold"

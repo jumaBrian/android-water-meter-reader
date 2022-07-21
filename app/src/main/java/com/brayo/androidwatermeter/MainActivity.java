@@ -25,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+//        public void inflate(int menuRes, Menu menu) {
+//            MenuInflater inflater = getMenuInflater();
+//            inflater.inflate(R.menu.menu_main);
+//        }
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu_main);
+
         launcher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -121,4 +121,17 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 });
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        FirebaseUser user = mAuth.getCurrentUser();
+//
+//        if (user != null){
+//            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//            startActivity(intent);
+//        }
+//
+//    }
 }
